@@ -24,20 +24,15 @@ func main() {
 
 	easy.ÇircularGameLosers(4, 4)
 
-	middle.MaxDistToClosest([]int{0, 1})
+	middle.NumFactoredBinaryTrees([]int{2, 4, 5, 10})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
 }
 
 func listNodeMain() {
-	
+
 	list1 := mystruct.ChangeArray2ListNode([]int{9, 5, 6, 4, 7, 13}, 2)
 	middle.DetectCycle(list1)
-
-
-
-
-
 
 	first := &difficult.ListNode{Val: 1}
 	first.Next = &difficult.ListNode{Val: 4}
