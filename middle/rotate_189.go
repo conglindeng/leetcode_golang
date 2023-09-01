@@ -14,7 +14,7 @@ func rotate(nums []int, k int) {
 	doRotate(nums, k+1, len(nums)-1)
 }
 
-func rotate_(nums []int, k int) {
+func rotate_2(nums []int, k int) {
 	res := make([]int, len(nums))
 	for i := 0; i < len(nums); i++ {
 		res[(i+k)%len(nums)] = nums[i]
@@ -22,4 +22,8 @@ func rotate_(nums []int, k int) {
 	for i := 0; i < len(nums); i++ {
 		nums[i] = res[i]
 	}
+}
+
+func rotate_3(nums []int, k int) {
+
 }
