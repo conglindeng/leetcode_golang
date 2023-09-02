@@ -13,16 +13,18 @@ import (
 
 func main() {
 	listNodeMain()
-	t := converter.ConvertIntArray2Tree([]int{8, 3, 10, 1, 6, -1, 14, -1, -1, 4, 7, 13}, -1)
-	t = &mystruct.TreeNode{Val: 1}
-	t.Left = &mystruct.TreeNode{Val: 5}
-	t.Left.Left = &mystruct.TreeNode{Val: 8}
-	t.Left.Left.Right = &mystruct.TreeNode{Val: 10}
-	t.Right = &mystruct.TreeNode{Val: 2}
-	t.Right.Right = &mystruct.TreeNode{Val: 0}
-	t.Right.Right.Left = &mystruct.TreeNode{Val: 3}
+	t := converter.ConvertIntArray2Tree([]int{1, 2, 3, 4, 5, 6}, -1)
+	fmt.Println(t)
+	t2 := &mystruct.TreeNode{Val: 1}
+	t2.Left = &mystruct.TreeNode{Val: 5}
+	t2.Left.Left = &mystruct.TreeNode{Val: 8}
+	t2.Left.Left.Right = &mystruct.TreeNode{Val: 10}
+	t2.Right = &mystruct.TreeNode{Val: 2}
+	t2.Right.Right = &mystruct.TreeNode{Val: 0}
+	t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
+	middle.CountNodes(t)
 
-	easy.ÇircularGameLosers(4, 4)
+	easy.CaptureForts([]int{1, 0, 0, -1, 0, 0, 0, 1, 0, -1})
 
 	middle.NumFactoredBinaryTrees([]int{2, 4, 5, 10})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
