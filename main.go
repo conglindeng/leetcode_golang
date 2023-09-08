@@ -29,6 +29,12 @@ func main() {
 	middle.NumFactoredBinaryTrees([]int{2, 4, 5, 10})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
+	tmp := []int{1, 2}
+	fmt.Println(tmp)
+	tmp1 := []int{2, 3, 4}
+	tmp = tmp1
+	fmt.Println(tmp)
+
 }
 
 func listNodeMain() {
