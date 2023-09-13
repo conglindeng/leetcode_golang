@@ -26,8 +26,10 @@ func main() {
 
 	easy.CaptureForts([]int{1, 0, 0, -1, 0, 0, 0, 1, 0, -1})
 
-	middle.NumFactoredBinaryTrees([]int{2, 4, 5, 10})
+	middle.CheckIfPrerequisite(2, [][]int{}, [][]int{{0, 1}, {0, 1}})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
+
+	difficult.Calculate("- 2+1")
 
 	tmp := []int{1, 2}
 	fmt.Println(tmp)
