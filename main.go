@@ -26,16 +26,10 @@ func main() {
 
 	easy.CaptureForts([]int{1, 0, 0, -1, 0, 0, 0, 1, 0, -1})
 
-	middle.CheckIfPrerequisite(2, [][]int{}, [][]int{{0, 1}, {0, 1}})
+	middle.EvalRPN_forward([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
 	difficult.Calculate("- 2+1")
-
-	tmp := []int{1, 2}
-	fmt.Println(tmp)
-	tmp1 := []int{2, 3, 4}
-	tmp = tmp1
-	fmt.Println(tmp)
 
 }
 

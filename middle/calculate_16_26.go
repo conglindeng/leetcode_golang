@@ -2,7 +2,7 @@ package middle
 
 import "strings"
 
-func Calculate(s string) int {
+func calculate(s string) int {
 	//two stack, one is used to save number and another
 	nums := make([]int, 0)
 	ops := make([]byte, 0)
