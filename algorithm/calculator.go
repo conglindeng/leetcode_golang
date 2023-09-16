@@ -2,8 +2,31 @@ package algorithm
 
 import "strconv"
 
-func calculate(s string) int {
-	return -1
+func Calculate(s string) int {
+	stack := []int{}
+	tokens := Change2RPN(s)
+	for _, v := range tokens {
+		if v[len(v)-1] >= '0' && v[len(v)-1] <= '9' {
+			x, _ := strconv.Atoi(v)
+			stack = append(stack, x)
+		} else {
+			second := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			switch v {
+			case "+":
+				stack[len(stack)-1] += second
+			case "-":
+				stack[len(stack)-1] -= second
+			case "*":
+				stack[len(stack)-1] *= second
+			case "/":
+				stack[len(stack)-1] /= second
+			}
+
+		}
+
+	}
+	return stack[0]
 }
 
 func Change2RPN(s string) []string {
@@ -23,7 +46,7 @@ func Change2RPN(s string) []string {
 
 			// 	opStack = append(opStack, top)
 			// } else {
-				opStack = append(opStack, "*")
+			opStack = append(opStack, "*")
 			// }
 			i++
 		case '/':
@@ -33,7 +56,7 @@ func Change2RPN(s string) []string {
 			// 	opStack[len(opStack)-1]="/"
 			// 	opStack = append(opStack, top)
 			// } else {
-				opStack = append(opStack, "/")
+			opStack = append(opStack, "/")
 			// }
 			i++
 		case '+':
@@ -65,7 +88,16 @@ func Change2RPN(s string) []string {
 			opStack = append(opStack, "(")
 			i++
 		case ')':
-			opStack = append(opStack, ")")
+			// opStack = append(opStack, ")")
+			// pop op until top one is (
+			for len(opStack) > 0 {
+				cur := opStack[len(opStack)-1]
+				opStack = opStack[:len(opStack)-1]
+				if cur == "(" {
+					break
+				}
+				stack = append(stack, cur)
+			}
 			preIsOp = false
 			i++
 		default:

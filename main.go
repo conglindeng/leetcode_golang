@@ -33,8 +33,12 @@ func main() {
 	difficult.Calculate("- 2+1")
 
 	// algorithm.Change2RPN("(1+(4+5+2)-3)+(6+8)")
-	algorithm.Change2RPN(" ((10 * (6 / ((9 + 3) * -11))) + 17) + 5")
+	// ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+	tokens := algorithm.Change2RPN(" ((10 * (-6 / ((-9 + -3) * -11))) + 17) + -5")
+	fmt.Println(tokens)
 
+	i := algorithm.Calculate(" ((10 * (6 / ((9 + 3) * -11))) + 17) + 5")
+	fmt.Println(i)
 }
 
 func listNodeMain() {
