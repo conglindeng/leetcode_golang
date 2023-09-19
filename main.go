@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 
-	"github.com/conglindeng/leetcode/algorithm"
 	"github.com/conglindeng/leetcode/converter"
 	_ "github.com/conglindeng/leetcode/converter"
 	"github.com/conglindeng/leetcode/difficult"
@@ -14,31 +13,24 @@ import (
 
 func main() {
 	listNodeMain()
-	t := converter.ConvertIntArray2Tree([]int{1, 2, 3, 4, 5, 6}, -1)
+	t := converter.ConvertIntArray2Tree([]int{79,99,77,-1,-1,-1,69,-1,60,53,-1,73,11,-1,-1,-1,62,27,62,-1,-1,98,50,-1,-1,90,48,82,-1,-1,-1,55,64,-1,-1,73,56,6,47,-1,93,-1,-1,75,44,30,82,-1,-1,-1,-1,-1,-1,57,36,89,42,-1,-1,76,10,-1,-1,-1,-1,-1,32,4,18,-1,-1,1,7,-1,-1,42,64,-1,-1,39,76,-1,-1,6,-1,66,8,96,91,38,38,-1,-1,-1,-1,74,42,-1,-1,-1,10,40,5,-1,-1,-1,-1,28,8,24,47,-1,-1,-1,17,36,50,19,63,33,89,-1,-1,-1,-1,-1,-1,-1,-1,94,72,-1,-1,79,25,-1,-1,51,-1,70,84,43,-1,64,35,-1,-1,-1,-1,40,78,-1,-1,35,42,98,96,-1,-1,82,26,-1,-1,-1,-1,48,91,-1,-1,35,93,86,42,-1,-1,-1,-1,0,61,-1,-1,67,-1,53,48,-1,-1,82,30,-1,97,-1,-1,-1,1,-1,-1}, -1)
 	fmt.Println(t)
-	t2 := &mystruct.TreeNode{Val: 1}
-	t2.Left = &mystruct.TreeNode{Val: 5}
-	t2.Left.Left = &mystruct.TreeNode{Val: 8}
-	t2.Left.Left.Right = &mystruct.TreeNode{Val: 10}
-	t2.Right = &mystruct.TreeNode{Val: 2}
-	t2.Right.Right = &mystruct.TreeNode{Val: 0}
-	t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
-	middle.CountNodes(t)
+	// t2 := &mystruct.TreeNode{Val: 1}
+	// t2.Left = &mystruct.TreeNode{Val: 5}
+	// t2.Left.Left = &mystruct.TreeNode{Val: 8}
+	// t2.Left.Left.Right = &mystruct.TreeNode{Val: 10}
+	// t2.Right = &mystruct.TreeNode{Val: 2}
+	// t2.Right.Right = &mystruct.TreeNode{Val: 0}
+	// t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
+	middle.Rob_tree_again(t)
 
 	easy.CaptureForts([]int{1, 0, 0, -1, 0, 0, 0, 1, 0, -1})
 
-	middle.EvalRPN_forward([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"})
+	middle.Rob__([]int{1})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
 	difficult.Calculate("- 2+1")
 
-	// algorithm.Change2RPN("(1+(4+5+2)-3)+(6+8)")
-	// ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
-	tokens := algorithm.Change2RPN(" ((10 * (-6 / ((-9 + -3) * -11))) + 17) + -5")
-	fmt.Println(tokens)
-
-	i := algorithm.Calculate(" ((10 * (6 / ((9 + 3) * -11))) + 17) + 5")
-	fmt.Println(i)
 }
 
 func listNodeMain() {

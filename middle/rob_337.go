@@ -36,7 +36,7 @@ func Rob(root *mystruct.TreeNode) int {
 	return max(calcu(root, true, 0), calcu(root, false, 0))
 }
 
-func Rob_(root *mystruct.TreeNode) int {
+func rob_tree(root *mystruct.TreeNode) int {
 	var dfs func(root *mystruct.TreeNode) []int
 	dfs = func(root *mystruct.TreeNode) []int {
 		if root == nil {
@@ -53,3 +53,20 @@ func Rob_(root *mystruct.TreeNode) int {
 }
 
 //4116  [79,99,77,-1,-1,-1,69,-1,60,53,-1,73,11,-1,-1,-1,62,27,62,-1,-1,98,50,-1,-1,90,48,82,-1,-1,-1,55,64,-1,-1,73,56,6,47,-1,93,-1,-1,75,44,30,82,-1,-1,-1,-1,-1,-1,57,36,89,42,-1,-1,76,10,-1,-1,-1,-1,-1,32,4,18,-1,-1,1,7,-1,-1,42,64,-1,-1,39,76,-1,-1,6,-1,66,8,96,91,38,38,-1,-1,-1,-1,74,42,-1,-1,-1,10,40,5,-1,-1,-1,-1,28,8,24,47,-1,-1,-1,17,36,50,19,63,33,89,-1,-1,-1,-1,-1,-1,-1,-1,94,72,-1,-1,79,25,-1,-1,51,-1,70,84,43,-1,64,35,-1,-1,-1,-1,40,78,-1,-1,35,42,98,96,-1,-1,82,26,-1,-1,-1,-1,48,91,-1,-1,35,93,86,42,-1,-1,-1,-1,0,61,-1,-1,67,-1,53,48,-1,-1,82,30,-1,97,-1,-1,-1,1,-1,-1]
+
+func Rob_tree_again(root *mystruct.TreeNode) int {
+	var getChildRob func(root *mystruct.TreeNode) (int, int)
+	getChildRob = func(root *mystruct.TreeNode) (int, int) {
+		if root == nil {
+			return 0, 0
+		}
+		if root.Left == nil && root.Right == nil {
+			return root.Val, 0
+		}
+		p1, np1 := getChildRob(root.Left)
+		p2, np2 := getChildRob(root.Right)
+		return root.Val + np1 + np2, max(p1,np1)+max(p2,np2)
+	}
+	i, i2 := getChildRob(root)
+	return max(i, i2)
+}
