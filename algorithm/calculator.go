@@ -29,6 +29,7 @@ func Calculate(s string) int {
 	return stack[0]
 }
 
+// Reverse Polish Notation
 func Change2RPN(s string) []string {
 	preIsOp, sign := true, 1
 	stack := []string{}
