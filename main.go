@@ -24,9 +24,8 @@ func main() {
 	// t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
 	middle.Rob_tree_again(t)
 
-	easy.CaptureForts([]int{1, 0, 0, -1, 0, 0, 0, 1, 0, -1})
+	easy.SplitNum(29)
 
-	middle.Rob__([]int{1})
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
 	difficult.Calculate("- 2+1")
