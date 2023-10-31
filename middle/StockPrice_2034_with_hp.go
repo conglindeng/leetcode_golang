@@ -26,13 +26,15 @@ func (this *StockPrice) Current() int {
 }
 
 func (this *StockPrice) Maximum() int {
+	//todo:dcl
 	for {
-		if first:=this.m.
+		// if first:=this.m.
 	}
+	return -1
 }
 
 func (this *StockPrice) Minimum() int {
-
+	return -1
 }
 
 type pair struct{ time, price int }

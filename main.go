@@ -23,8 +23,9 @@ func main() {
 	// t2.Right.Right = &mystruct.TreeNode{Val: 0}
 	// t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
 	middle.Rob_tree_again(t)
-
 	easy.SplitNum(29)
+
+	easy.PickGifts([]int{25, 64, 9, 4, 100}, 4)
 
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
@@ -32,8 +33,8 @@ func main() {
 
 	l := difficult.Constructor(2)
 	l.Put(3, 1)
-	l.Put(2, 1)// 2,1  1,1
-	l.Put(2, 2)// 2,3  1,1
+	l.Put(2, 1) // 2,1  1,1
+	l.Put(2, 2) // 2,3  1,1
 	l.Put(4, 4) //2,3  4,1
 	l.Get(2)
 }
