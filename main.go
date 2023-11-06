@@ -22,7 +22,7 @@ func main() {
 	// t2.Right = &mystruct.TreeNode{Val: 2}
 	// t2.Right.Right = &mystruct.TreeNode{Val: 0}
 	// t2.Right.Right.Left = &mystruct.TreeNode{Val: 3}
-	middle.Rob_tree_again(t)
+	middle.FindRepeatedDnaSequences("AAAAAAAAAAA")
 	easy.SplitNum(29)
 
 	easy.PickGifts([]int{25, 64, 9, 4, 100}, 4)
