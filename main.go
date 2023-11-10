@@ -25,7 +25,7 @@ func main() {
 	middle.FindRepeatedDnaSequences("AAAAAAAAAAA")
 	easy.SplitNum(29)
 
-	easy.PickGifts([]int{25, 64, 9, 4, 100}, 4)
+	easy.FindTheLongestBalancedSubstring("01")
 
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
 
