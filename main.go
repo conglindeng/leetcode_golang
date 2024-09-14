@@ -25,6 +25,8 @@ func main() {
 	middle.FindRepeatedDnaSequences("AAAAAAAAAAA")
 	easy.SplitNum(29)
 
+	fmt.Println(easy.MaxmiumScore([]int{9, 5, 9, 1, 6, 10, 3, 4, 5, 1}, 2))
+
 	easy.LongestAlternatingSubarray([]int{2, 3, 4, 5}, 4)
 
 	// r := middle.MinSubarray([]int{6, 3, 5, 2}, 9)
