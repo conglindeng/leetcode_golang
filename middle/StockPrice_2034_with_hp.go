@@ -45,10 +45,10 @@ func (h hp) Len() int           { return len(h) }
 func (h hp) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 func (h hp) Less(i, j int) bool { return h[i].price < h[j].price }
 
-func (h *hp) Push(x any) {
+func (h *hp) Push(x interface{}) {
 	*h = append(*h, x.(pair))
 }
-func (h *hp) Pop() any {
+func (h *hp) Pop() interface{} {
 	a := *h
 	v := a[len(a)-1]
 	*h = a[:len(a)-1]

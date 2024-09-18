@@ -37,11 +37,11 @@ type KthHeap struct {
 	sort.IntSlice
 }
 
-func (h *KthHeap) Push(x any) {
+func (h *KthHeap) Push(x interface{}) {
 	h.IntSlice = append(h.IntSlice, x.(int))
 }
 
-func (h *KthHeap) Pop() any {
+func (h *KthHeap) Pop() interface{} {
 	cur := h.IntSlice[len(h.IntSlice)]
 	h.IntSlice = h.IntSlice[:len(h.IntSlice)-1]
 	return cur

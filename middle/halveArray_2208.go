@@ -16,10 +16,10 @@ func (h HalveArray) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *HalveArray) Push(x any) {
+func (h *HalveArray) Push(x interface{}) {
 	*h = append(*h, x.(float64))
 }
-func (h *HalveArray) Pop() any {
+func (h *HalveArray) Pop() interface{} {
 	m := *h
 	x := m[len(m)-1]
 	*h = m[:len(m)-1]

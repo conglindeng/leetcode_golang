@@ -32,10 +32,10 @@ func (h giftHP) Len() int           { return len(h) }
 func (h giftHP) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 func (h giftHP) Less(i, j int) bool { return h[i] > h[j] }
 
-func (h *giftHP) Push(x any) {
+func (h *giftHP) Push(x interface{}) {
 	*h = append(*h, x.(int))
 }
-func (h *giftHP) Pop() any {
+func (h *giftHP) Pop() interface{} {
 	a := *h
 	v := a[len(a)-1]
 	*h = a[:len(a)-1]
